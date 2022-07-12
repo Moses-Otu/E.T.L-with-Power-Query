@@ -14,15 +14,23 @@ In this project the Data science book portfolio from Ebay was extracted using Po
   *  on the formular bar, create a variable *=(StartPage)=>*
   *  In the Query script replace the page number with *StartPage*
 
-~~{~~ 
-  = (StartPage)=>
+'''  = (StartPage)=>
 let
     Source = Web.BrowserContents("https://www.ebay.com/sch/i.html?_from=R40&_nkw=Data+science&_sacat=261186&_pgn="&StartPage),
-    #"Extracted Table From Html" = Html.Table(Source, {{"Book Title", ".srp-river-results .s-item__title"}, {"Price", ".srp-river-results .s-item__price"}, {"shipping from", ".s-item__location"}, {"shipping price", ".s-item__shipping"}}, [RowSelector=".s-item\-\-watch-at-corner"]),
-    #"Changed Type" = Table.TransformColumnTypes(#"Extracted Table From Html",{{"Book Title", type text}, {"Price", Currency.Type}, {"shipping from", type text}, {"shipping price", type text}})
+    #"Extracted Table From Html" = Html.Table(Source, {
+		{"Book Title", ".srp-river-results .s-item__title"}, 
+		{"Price", ".srp-river-results .s-item__price"}, 
+		{"shipping from", ".s-item__location"}, 
+		{"shipping price", ".s-item__shipping"}}, 
+		[RowSelector=".s-item\-\-watch-at-corner"]),
+    #"Changed Type" = Table.TransformColumnTypes(
+	#"Extracted Table From Html",{{"Book Title", type text}, 
+	{"Price", Currency.Type}, 
+	{"shipping from", type text},
+	{"shipping price", type text}
+	})
 in
-    #"Changed Type" 
-    ~~}~~
+    #"Changed Type"
     
  *  Create a blank query and create a list from 1 to any number of page you want to scrape *{1-100}*
    *  format as a table
