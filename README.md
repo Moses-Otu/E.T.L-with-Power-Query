@@ -1,5 +1,5 @@
 # E.T.L-with-Power-Query
-Extract Transforma and Load data using Power Query
+Extract Transform and Load data using Power Query
 # INTRO
 The general sequence in any data analytic project involves Extracting, Transforming and Loading data(ETL/ELT). It is however common place to focus solely in the transforming and Loading aspect of the sequence and leave extraction to the Data Engineers.
 Extracting seems to be an ardous task because of the tools and skills involved agreed, but it is a skill that should be learnt.
@@ -39,4 +39,6 @@ in
  *  Select add new query and import your fx data field.
  *  Finally perform as many transformations as required before loading. If you are loading thousands of rows, properly transform(group) your data before load to increase speed during refresh.  
  
+ 
+ DON'T FORGET TO CHECK OUT THE VIDEO: https://youtu.be/J3AYIkYg9Qs
 
