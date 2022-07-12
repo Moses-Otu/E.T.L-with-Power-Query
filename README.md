@@ -6,7 +6,7 @@ Extracting seems to be an ardous task because of the tools and skills involved a
 In this project the Data science book portfolio from Ebay was extracted using Power Query, transformed and loaded for analysis but focus is mainly on the Extraction.
 # Steps in extraction
 ** Find walk through video here: https://youtu.be/J3AYIkYg9Qs
-#Abridged explanation of the video
+# Abridged explanation of the video
 . Connect to web
 . Get table by example (on each column start typing the row field that you require and powerBI will auto populate)
 . Load for transformation
