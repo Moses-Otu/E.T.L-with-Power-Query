@@ -13,6 +13,18 @@ In this project the Data science book portfolio from Ebay was extracted using Po
 *  PowerBI will load only the forst page from the web page so you will have iterate through the required pages to do,
   *  on the formular bar, create a variable *=(StartPage)=>*
   *  In the Query script replace the page number with *StartPage*
+*  Create a blank query and create a list from 1 to any number of page you want to scrape *{1-100}*
+  *  format as a table
+  *  add a modulo and set it's value to the number of rows per page of the web page. in my case it was 60.
+   
+*  Select add new query and import your fx data field.
+*  Finally perform as many transformations as required before loading. If you are loading thousands of rows, properly transform(group) your data before load to increase speed during refresh.  
+ 
+ 
+ DON'T FORGET TO CHECK OUT THE VIDEO: https://youtu.be/J3AYIkYg9Qs
+ 
+ HTML Script:
+
 
 ```  = (StartPage)=>
 let
@@ -30,15 +42,6 @@ let
 	{"shipping price", type text}
 	})
 in
-    #"Changed Type" ```
+    #"Changed Type" 
     
- *  Create a blank query and create a list from 1 to any number of page you want to scrape *{1-100}*
-   *  format as a table
-   *  add a modulo and set it's value to the number of rows per page of the web page. in my case it was 60.
-   
- *  Select add new query and import your fx data field.
- *  Finally perform as many transformations as required before loading. If you are loading thousands of rows, properly transform(group) your data before load to increase speed during refresh.  
- 
- 
- DON'T FORGET TO CHECK OUT THE VIDEO: https://youtu.be/J3AYIkYg9Qs
 
