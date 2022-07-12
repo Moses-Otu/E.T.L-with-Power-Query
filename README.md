@@ -14,7 +14,7 @@ In this project the Data science book portfolio from Ebay was extracted using Po
   *  on the formular bar, create a variable *=(StartPage)=>*
   *  In the Query script replace the page number with *StartPage*
 
-'''  = (StartPage)=>
+```  = (StartPage)=>
 let
     Source = Web.BrowserContents("https://www.ebay.com/sch/i.html?_from=R40&_nkw=Data+science&_sacat=261186&_pgn="&StartPage),
     #"Extracted Table From Html" = Html.Table(Source, {
