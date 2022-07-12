@@ -1,7 +1,7 @@
 # E.T.L-with-Power-Query
 Extract Transforma and Load data using Power Query
 # INTRO
-The general sequence in any analytic project involves Extracting, Transforming and Loading data. It is however common place in most to focus solely in the transforming and Loading aspect of the sequence and leaving the part of extraction to the Data Engineers.
+The general sequence in any data analytic project involves Extracting, Transforming and Loading data(ETL/ELT). It is however common place to focus solely in the transforming and Loading aspect of the sequence and leaving the part of extraction to the Data Engineers.
 Extracting seems to be an ardous task because of the tools and skills involved agreed, but it is a skill that should be learnt.
 In this project the Data science book portfolio from Ebay was extracted using Power Query, transformed and loaded for analysis but focus is mainly on the Extraction.
 # Steps in extraction
