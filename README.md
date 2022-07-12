@@ -14,7 +14,7 @@ In this project the Data science book portfolio from Ebay was extracted using Po
   *  on the formular bar, create a variable *=(StartPage)=>*
   *  In the Query script replace the page number with *StartPage*
 
-{ 
+~~{~~ 
   = (StartPage)=>
 let
     Source = Web.BrowserContents("https://www.ebay.com/sch/i.html?_from=R40&_nkw=Data+science&_sacat=261186&_pgn="&StartPage),
@@ -22,5 +22,13 @@ let
     #"Changed Type" = Table.TransformColumnTypes(#"Extracted Table From Html",{{"Book Title", type text}, {"Price", Currency.Type}, {"shipping from", type text}, {"shipping price", type text}})
 in
     #"Changed Type" 
-    }
+    ~~}~~
+    
+ *  Create a blank query and create a list from 1 to any number of page you want to scrape *{1-100}*
+   *  format as a table
+   *  add a modulo and set it's value to the number of rows per page of the web page. in my case it was 60.
+   
+ *  Select add new query and import your fx data field.
+ *  Finally perform as many transformations as required before loading. If you are loading thousands of rows, properly transform(group) your data before load to increase speed during refresh.  
+ 
 
